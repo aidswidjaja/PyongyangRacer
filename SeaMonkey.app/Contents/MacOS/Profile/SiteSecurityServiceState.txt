@@ -1,0 +1,2 @@
+duckduckgo.com:HSTS	0	18756	1652092199692,1,0,2
+location.services.mozilla.com:HSTS	0	18756	1652092176961,1,1,2

@@ -10,7 +10,7 @@
 - Download the Pyongyang Racer application from the [Releases](https://github.com/aidswidjaja/PyongyangRacer/releases) page.
 - Open the application and play :)
 
-Note: you must be connected to the Internet to play.
+Note: you must be connected to the Internet to play...
 
 ## Developer notes
 

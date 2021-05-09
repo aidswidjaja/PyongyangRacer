@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"
+      dir="ltr">
+  <head>
+    <title>Welcome to SeaMonkey</title>
+    <link rel="stylesheet" type="text/css" href="/css/base/template.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/base/content.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/artemia/template.css" title="Artemia Nyos" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/artemia/content.css" title="Artemia Nyos" media="screen">
+    <link rel="icon" href="/images/seamonkey16.png" type="image/png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+<link rel="top" href="../" title="SeaMonkey Project">
+<link rel="up" href="../" title="Home">
+
+<script type="text/javascript" src="/download.js"></script>
+<script type="text/javascript" src="/buildtest.js"></script>
+
+
+
+  </head>
+  <body id="seamonkeyproject-org">
+    <div id="header"><h1><a href="/" title="Go to seamonkey-project.org" accesskey="1"><img
+      src="/images/template/header-logo.png" height="38" width="260" alt="SeaMonkey Project"></a></h1></div>
+    <div id="breadcrumbs">
+      <a href="../">Home</a>  &#187; <span>Start Page</span>
+    </div>
+    <div id="content">
+      <div id="side">
+        <ul id="nav">
+	<li><a href="../">Home</a></li>
+	<li><a href="../news">News</a></li>
+	<li><a href="../releases/">Download and Releases</a></li>
+	<li><a href="../start/">Start Page</a></li>
+	<li><a href="../community">Community and Support</a></li>
+	<li><a href="../doc/">Documentation and Help</a></li>
+	<li><a href="https://addons.thunderbird.net/seamonkey/">Add-Ons</a></li>
+	<li><a href="http://www.zazzle.com/seamonkeyproject">SeaMonkey Shop</a></li>
+	<li><a href="../donate/">Donate</a></li>
+	<li><a href="../association/">SeaMonkey Association</a></li>
+	<li><a href="../dev/">Development</a></li>
+	<li><a href="../legal/">Legal Resources</a></li>
+	<li><a href="../about">About</a></li>
+</ul>
+      </div>
+      <div id="mainContent">
+        
+
+<h1>Welcome to SeaMonkey</h1>
+
+<div class="key-point">
+  <iframe src="https://duckduckgo.com/search.html?t=seamonkey&prefill=Search DuckDuckGo" style="overflow:hidden;margin:0;padding:0;width:100%;height:40px;" frameborder="0"></iframe>
+  <span class="note" style="font-size: small">For your convenience we've
+    included a DuckDuckGo search box here. It will search the whole web.</span>
+</div>
+
+<h2>SeaMonkey Project</h2>
+
+<div id="nagBox" class="important" style="display: none;">
+  <p><span class="shout">Hey!</span> Your copy of SeaMonkey is more than four
+  weeks old. Unless you are using the latest release or nightly build, bug
+  reports get rapidly less useful the older your copy is.
+  </p>
+  <p>So <b>if you're not running the <a href="../releases/">latest release
+  (SeaMonkey 2.53.7.1)</a></b>, we could use your help testing either that or the
+  <a href="../dev/nightly">latest
+  nightly build</a>. (Be warned that nightly builds are development software,
+  and there is no guarantee that they won't fry your processor, insult your
+  mother, or cause you to break out in a nasty rash.)
+  </p>
+</div>
+
+<div id="nagBox-beta" class="important" style="display: none;">
+  <p><span class="shout">Hey!</span> Your copy of SeaMonkey is outdated and we
+  offer a newer testing version. Unless you are using the latest (testing)
+  release or nightly build, bug reports get rapidly less useful the older your
+  copy is.
+  </p>
+  <p>So <b>if you're not running the <a href="../releases/">latest release
+  (SeaMonkey 2.53.7.1)</a> or the  <a href="../releases/2.53.7b1">latest
+  testing version (SeaMonkey 2.53.7 Beta 1)</a></b>, we could use your help testing
+  either those or the
+  <a href="../dev/nightly">latest
+  nightly build</a>. (Be warned that nightly builds are development software,
+  and there is no guarantee that they won't fry your processor, insult your
+  mother, or cause you to break out in a nasty rash.)
+  </p>
+</div>
+
+<div id="stable" class="key-point">
+  <div class="key-info-stable">
+    <strong class="very-strong">Congratulations!</strong> You've downloaded
+    (or compiled) a stable version of SeaMonkey.
+
+    <p>If you want to help making this application even better, we would encourage
+    you to <a href="../dev/get-involved">take part in the SeaMonkey testing
+    community</a>.
+    Helping out won't take much of your time, doesn't require special skills,
+    and will help improve SeaMonkey.
+    </p>
+  </div>
+  <div class="key-info-donate">
+    <a href="https://www.seamonkey-project.org/donate/"
+       title="Donate for SeaMonkey"><img src="/images/seamonkey_logo.png"
+                                         alt="SeaMonkey Internet Application Suite"></a>
+    <p style="margin: 0;">
+    <a href="https://www.seamonkey-project.org/donate/"
+    title="Donate for SeaMonkey">Donate to SeaMonkey e.V. and help us with
+    building a better SeaMonkey Internet Application Suite.</a></p>
+  </div>
+</div>
+
+<div id="old_get" style="display: none;" class="key-point">
+  <div id="oldstable" style="display: none;" class="key-info-desc">
+    <strong class="very-strong shout">Warning!</strong> You're using an old
+    stable version of SeaMonkey<span id="oldvernumber"></span>, while we offer
+    a newer version which contains
+    <a href="http://www.mozilla.org/security/known-vulnerabilities/#SeaMonkey">important
+    security fixes</a>.
+
+    <p>We encourage you to <strong>download the newer version</strong> linked
+    in the download box at the right to be safe from known vulnerabilities and be
+    able to use the newest features in a stable SeaMonkey release.</p>
+
+    <p class="note">If you get this message despite having installed
+    SeaMonkey 2.53.7.1 already, you might want to try
+    <a href="http://kb.mozillazine.org/Resetting_your_useragent_string_to_its_compiled-in_default"
+       class="exref">resetting your user agent string to the default</a>.</p>
+  </div>
+  <div id="getseamonkey" style="display: none;" class="key-info-desc">
+    <p>Thanks for visiting this SeaMonkey start page, even though it appears to
+    us that you are not using SeaMonkey yet.</p>
+    <p>You can get the SeaMonkey Internet Application Suite, including browser,
+    mail and more, for free download from the links shown on the right.</p>
+  </div>
+  <div class="key-info-side">
+    <div class="download">
+      <h3>Download Now</h3>
+      <b>SeaMonkey 2.53.7.1</b>
+      <br>
+      <span class="download-label">Platform:</span>
+      <b class="download-content" id="info_platform"></b>
+      <br>
+      <span class="download-label">Language:</span>
+      <b class="download-content" id="info_language"></b>
+      <ul>
+        <li id="download_icon" class="download-win"><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/en-US/seamonkey-2.53.7.1.en-US.win32.installer.exe" id="download_link" data-title="Download SeaMonkey 2.53.7.1 for %platform in %language" class="main" data-display-name="SeaMonkey 2.53.7.1" data-version="2.53.7.1" data-platform="win64" data-language="en-US">
+        Download Now
+      </a></li>
+       <li id="download-other" class="other"><a href="../releases/#2.53.7.1">Other
+           Systems &amp; Languages</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="download_fieldset" style="display: none;">
+
+<fieldset>
+    <p class="select-platform">
+      <label for="download_platform" class="select-label">Which operating system are you using?</label>
+      <select id="download_platform" class="select-input" aria-controls="download_info">
+        <option value="win64">Windows x64</option>
+        <option value="win">Windows x86</option>
+        <option value="osx">macOS x64</option>
+        <option value="linux64">Linux x64</option>
+        <option value="linux">Linux x86</option>
+      </select>
+    </p>
+    <p class="select-language">
+      <label for="download_language" class="select-label">Would you like to select a different language?</label>
+      <select id="download_language" class="select-input" aria-controls="download_info">
+        <option value="zh-CN">Chinese (Simplified) — 中文 (简体)</option>
+        <option value="zh-TW">Chinese (Traditional) — 正體中文 (繁體)</option>
+        <option value="cs">Czech — Čeština</option>
+        <option value="nl">Dutch — Nederlands</option>
+        <option value="en-GB">English (British)</option>
+        <option value="en-US">English (US)</option>
+        <option value="fi">Finnish — suomi</option>
+        <option value="fr">French — Français</option>
+        <option value="ka">Georgian — ქართული</option>
+        <option value="de">German — Deutsch</option>
+        <option value="el">Greek — Ελληνικά</option>
+        <option value="hu">Hungarian — magyar</option>
+        <option value="it">Italian — Italiano</option>
+        <option value="ja">Japanese — 日本語</option>
+        <option value="nb-NO">Norwegian (Bokmål) — Norsk bokmål</option>
+        <option value="pl">Polish — Polski</option>
+        <option value="pt-BR">Portuguese (Brazilian) — Português (do Brasil)</option>
+        <option value="pt-PT">Portuguese (Portugal) — Português (Europeu)</option>
+        <option value="ru">Russian — Русский</option>
+        <option value="sk">Slovak — slovenčina</option>
+        <option value="es-AR">Spanish (Argentina) — Español (de Argentina)</option>
+        <option value="es-ES">Spanish (Spain) — Español (de España)</option>
+        <option value="sv-SE">Swedish — Svenska</option>
+      </select>
+    </p>
+  </fieldset>
+</div>
+<div style="display: none;">
+
+<table class="downloads" cellpadding="0" cellspacing="0" summary="SeaMonkey builds available for download.">
+    <thead>
+      <tr>
+        <th colspan="2" class="top-left">Language</th>
+        <th>Version</th>
+        <th><span class="download-win">Windows<br>x64</span></th>
+        <th><span class="download-win">Windows<br>x86</span></th>
+        <th><span class="download-mac">macOS<br>x64</span></th>
+        <th><span class="download-linux">Linux<br>x64</span></th>
+        <th class="top-right"><span class="download-linux">Linux<br>x86</span></th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td class="bottom-left"></td>
+        <td colspan="6"></td>
+        <td class="bottom-right"></td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr id="zh-CN" class="odd">
+        <td>Chinese (Simplified)</td>
+        <td lang="zh-CN">中文 (简体)</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/zh-CN/seamonkey-2.53.7.1.zh-CN.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/zh-CN/seamonkey-2.53.7.1.zh-CN.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/zh-CN/seamonkey-2.53.7.1.zh-CN.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/zh-CN/seamonkey-2.53.7.1.zh-CN.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/zh-CN/seamonkey-2.53.7.1.zh-CN.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="zh-TW" class="even">
+        <td>Chinese (Traditional)</td>
+        <td lang="zh-TW">正體中文 (繁體)</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/zh-TW/seamonkey-2.53.7.1.zh-TW.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/zh-TW/seamonkey-2.53.7.1.zh-TW.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/zh-TW/seamonkey-2.53.7.1.zh-TW.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/zh-TW/seamonkey-2.53.7.1.zh-TW.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/zh-TW/seamonkey-2.53.7.1.zh-TW.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="cs" class="odd">
+        <td>Czech</td>
+        <td lang="cs">Čeština</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/cs/seamonkey-2.53.7.1.cs.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/cs/seamonkey-2.53.7.1.cs.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/cs/seamonkey-2.53.7.1.cs.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/cs/seamonkey-2.53.7.1.cs.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/cs/seamonkey-2.53.7.1.cs.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="nl" class="even">
+        <td>Dutch</td>
+        <td lang="nl">Nederlands</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/nl/seamonkey-2.53.7.1.nl.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/nl/seamonkey-2.53.7.1.nl.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/nl/seamonkey-2.53.7.1.nl.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/nl/seamonkey-2.53.7.1.nl.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/nl/seamonkey-2.53.7.1.nl.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="en-GB" class="odd">
+        <td>English (British)</td>
+        <td lang="en-GB">English (British)</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/en-GB/seamonkey-2.53.7.1.en-GB.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/en-GB/seamonkey-2.53.7.1.en-GB.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/en-GB/seamonkey-2.53.7.1.en-GB.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/en-GB/seamonkey-2.53.7.1.en-GB.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/en-GB/seamonkey-2.53.7.1.en-GB.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="en-US" class="even">
+        <td>English (US)</td>
+        <td lang="en-US">English (US)</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/en-US/seamonkey-2.53.7.1.en-US.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/en-US/seamonkey-2.53.7.1.en-US.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/en-US/seamonkey-2.53.7.1.en-US.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/en-US/seamonkey-2.53.7.1.en-US.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/en-US/seamonkey-2.53.7.1.en-US.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="fi" class="odd">
+        <td>Finnish</td>
+        <td lang="fi">suomi</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/fi/seamonkey-2.53.7.1.fi.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/fi/seamonkey-2.53.7.1.fi.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/fi/seamonkey-2.53.7.1.fi.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/fi/seamonkey-2.53.7.1.fi.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/fi/seamonkey-2.53.7.1.fi.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="fr" class="even">
+        <td>French</td>
+        <td lang="fr">Français</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/fr/seamonkey-2.53.7.1.fr.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/fr/seamonkey-2.53.7.1.fr.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/fr/seamonkey-2.53.7.1.fr.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/fr/seamonkey-2.53.7.1.fr.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/fr/seamonkey-2.53.7.1.fr.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="ka" class="odd">
+        <td>Georgian</td>
+        <td lang="ka">ქართული</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/ka/seamonkey-2.53.7.1.ka.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/ka/seamonkey-2.53.7.1.ka.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/ka/seamonkey-2.53.7.1.ka.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/ka/seamonkey-2.53.7.1.ka.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/ka/seamonkey-2.53.7.1.ka.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="de" class="even">
+        <td>German</td>
+        <td lang="de">Deutsch</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/de/seamonkey-2.53.7.1.de.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/de/seamonkey-2.53.7.1.de.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/de/seamonkey-2.53.7.1.de.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/de/seamonkey-2.53.7.1.de.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/de/seamonkey-2.53.7.1.de.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="el" class="odd">
+        <td>Greek</td>
+        <td lang="el">Ελληνικά</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/el/seamonkey-2.53.7.1.el.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/el/seamonkey-2.53.7.1.el.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/el/seamonkey-2.53.7.1.el.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/el/seamonkey-2.53.7.1.el.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/el/seamonkey-2.53.7.1.el.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="hu" class="even">
+        <td>Hungarian</td>
+        <td lang="hu">Magyar</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/hu/seamonkey-2.53.7.1.hu.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/hu/seamonkey-2.53.7.1.hu.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/hu/seamonkey-2.53.7.1.hu.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/hu/seamonkey-2.53.7.1.hu.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/hu/seamonkey-2.53.7.1.hu.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="it" class="odd">
+        <td>Italian</td>
+        <td lang="it">Italiano</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/it/seamonkey-2.53.7.1.it.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/it/seamonkey-2.53.7.1.it.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/it/seamonkey-2.53.7.1.it.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/it/seamonkey-2.53.7.1.it.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/it/seamonkey-2.53.7.1.it.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="ja" class="even">
+        <td>Japanese</td>
+        <td lang="ja">日本語</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/ja/seamonkey-2.53.7.1.ja.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/ja/seamonkey-2.53.7.1.ja.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/ja-JP-mac/seamonkey-2.53.7.1.ja-JP-mac.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/ja/seamonkey-2.53.7.1.ja.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/ja/seamonkey-2.53.7.1.ja.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="nb-NO" class="odd">
+        <td>Norwegian (Bokmål)</td>
+        <td lang="nb-NO">Norsk bokmål</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/nb-NO/seamonkey-2.53.7.1.nb-NO.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/nb-NO/seamonkey-2.53.7.1.nb-NO.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/nb-NO/seamonkey-2.53.7.1.nb-NO.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/nb-NO/seamonkey-2.53.7.1.nb-NO.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/nb-NO/seamonkey-2.53.7.1.nb-NO.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="pl" class="even">
+        <td>Polish</td>
+        <td lang="pl">Polski</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/pl/seamonkey-2.53.7.1.pl.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/pl/seamonkey-2.53.7.1.pl.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/pl/seamonkey-2.53.7.1.pl.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/pl/seamonkey-2.53.7.1.pl.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/pl/seamonkey-2.53.7.1.pl.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="pt-BR" class="odd">
+        <td>Portuguese (Brazilian)</td>
+        <td lang="pt-BR">Português (do Brasil)</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/pt-BR/seamonkey-2.53.7.1.pt-BR.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/pt-BR/seamonkey-2.53.7.1.pt-BR.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/pt-BR/seamonkey-2.53.7.1.pt-BR.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/pt-BR/seamonkey-2.53.7.1.pt-BR.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/pt-BR/seamonkey-2.53.7.1.pt-BR.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="pt-PT" class="even">
+        <td>Portuguese (Portugal)</td>
+        <td lang="pt-PT">Português (Europeu)</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/pt-PT/seamonkey-2.53.7.1.pt-PT.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/pt-PT/seamonkey-2.53.7.1.pt-PT.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/pt-PT/seamonkey-2.53.7.1.pt-PT.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/pt-PT/seamonkey-2.53.7.1.pt-PT.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/pt-PT/seamonkey-2.53.7.1.pt-PT.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="ru" class="odd">
+        <td>Russian</td>
+        <td lang="ru">Русский</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/ru/seamonkey-2.53.7.1.ru.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/ru/seamonkey-2.53.7.1.ru.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/ru/seamonkey-2.53.7.1.ru.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/ru/seamonkey-2.53.7.1.ru.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/ru/seamonkey-2.53.7.1.ru.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="sk" class="even">
+        <td>Slovak</td>
+        <td lang="sk">slovenčina</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/sk/seamonkey-2.53.7.1.sk.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/sk/seamonkey-2.53.7.1.sk.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/sk/seamonkey-2.53.7.1.sk.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/sk/seamonkey-2.53.7.1.sk.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/sk/seamonkey-2.53.7.1.sk.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="es-AR" class="odd">
+        <td>Spanish (Argentina)</td>
+        <td lang="es-AR">Español (de Argentina)</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/es-AR/seamonkey-2.53.7.1.es-AR.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/es-AR/seamonkey-2.53.7.1.es-AR.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/es-AR/seamonkey-2.53.7.1.es-AR.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/es-AR/seamonkey-2.53.7.1.es-AR.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/es-AR/seamonkey-2.53.7.1.es-AR.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="es-ES" class="even">
+        <td>Spanish (Spain)</td>
+        <td lang="es-ES">Español (de España)</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/es-ES/seamonkey-2.53.7.1.es-ES.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/es-ES/seamonkey-2.53.7.1.es-ES.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/es-ES/seamonkey-2.53.7.1.es-ES.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/es-ES/seamonkey-2.53.7.1.es-ES.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/es-ES/seamonkey-2.53.7.1.es-ES.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+      <tr id="sv-SE" class="odd">
+        <td>Swedish</td>
+        <td lang="sv-SE">Svenska</td>
+        <td class="curVersion">2.53.7.1</td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win64/sv-SE/seamonkey-2.53.7.1.sv-SE.win64.installer.exe" class="download-win" data-platform="win64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/win32/sv-SE/seamonkey-2.53.7.1.sv-SE.win32.installer.exe" class="download-win" data-platform="win">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/mac/sv-SE/seamonkey-2.53.7.1.sv-SE.mac.dmg" class="download-mac" data-platform="osx">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-x86_64/sv-SE/seamonkey-2.53.7.1.sv-SE.linux-x86_64.tar.bz2" class="download-linux" data-platform="linux64">Download</a></td>
+        <td><a href="https://archive.mozilla.org/pub/seamonkey/releases/2.53.7.1/linux-i686/sv-SE/seamonkey-2.53.7.1.sv-SE.linux-i686.tar.bz2" class="download-linux" data-platform="linux">Download</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="unsupported" style="display: none;" class="important">
+  <p>Thanks for using SeaMonkey. Unfortunately, <strong>your platform is no
+  longer supported</strong> by the latest stable version of our product so
+  we cannot offer you an upgrade unless you upgrade your operating system.</p>
+</div>
+
+<div id="unstable" style="display: none;" class="key-point">
+<strong class="very-strong">Congratulations!</strong> You've downloaded
+(or compiled) a copy of SeaMonkey. This means that you've volunteered to
+<a href="../dev/get-involved">become part of the SeaMonkey testing community</a>.
+
+<p>If that doesn't sound like something you meant to do, you might be better off
+with one of our <a href="../releases/">stable releases</a>.
+Otherwise, welcome aboard! Helping out won't take much of your time, doesn't
+require special skills, and will help improve SeaMonkey.</p>
+</div>
+
+<div style="width: 49%; float: right;">
+  <h3 style="margin-top:0">Resources</h3>
+
+  <ul class="compact">
+    <li><a href="../releases/">SeaMonkey Releases</a></li>
+    <li><a href="https://addons.thunderbird.net/seamonkey/">Get Add-Ons</a></li>
+    <li><a href="http://plugindoc.mozdev.org/" class="ex-ref">Plugin Help</a></li>
+    <li><a href="http://www.zazzle.com/seamonkeyproject" class="ex-ref">SeaMonkey
+        Merchandise</a></li>
+  </ul>
+</div>
+
+<div style="width: 49%;">
+  <h3 style="margin-top:0">Community &amp; Support</h3>
+
+  <ul class="compact">
+    <li><a href="../community">SeaMonkey Community</a></li>
+    <li><a href="../dev/get-involved">Get Involved</a></li>
+    <li><a href="../doc/">Documentation</a></li>
+    <li><a href="http://kb.mozillazine.org/Mozilla_Suite"
+           title="Community-contributed Wiki" class="ex-ref">More Help - Knowledge Base</a></li>
+  </ul>
+</div>
+
+<div style="clear: both;">
+  <p id="stablenote" class="note">As SeaMonkey is a volunteer community project,
+  we can not provide direct end-user support through our development team.
+  The <a href="../community">SeaMonkey Community</a> can usually provide
+  you with any help you need on using our software, though.
+  </p>
+  <p id="unstablenote" class="note" style="display: none;">The build you are
+  using is not an official release, it has been made available for
+  <strong>testing purposes only</strong>, with no end-user support.
+  If that sounds scary, you'd probably be better off with the latest
+  <a href="../releases/">stable release</a>.
+  </p>
+</div>
+
+
+        <address>                
+        </address>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <ul id="footer-menu">
+        <li><a href="../sitemap">Site Map</a></li>
+        <li><a href="http://www.mozilla.org/security/">Security Updates</a></li>
+        <li><a href="../about">About SeaMonkey</a></li>
+        <li><a href="../about#contact">Contact Us</a></li>
+      </ul>
+      <p class="tLicense">SeaMonkey and the SeaMonkey logo are <a href="../legal/trademark">registered trademarks</a> of the <a href="http://www.mozilla.org/foundation/">Mozilla Foundation</a>.</p>
+      <p class="tLicense">Portions of this content are &copy; 1998&#8211;2021 by individual mozilla.org contributors; content available under a Creative Commons license | <a href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</p>
+            <ul class="site-tools">
+        <li>Last modified May 01, 2021</li>
+        <li><a href="https://hg.mozilla.org/SeaMonkey/seamonkey-project-org/log/default/src/start/index.en.html">Document History</a></li>
+      </ul>
+    </div>
+
+  </body>
+</html>KfY-      `���`���B���`��3   )    :https://www.seamonkey-project.org/start/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET request-accept-language en-US,en;q=0.5 response-head HTTP/1.1 200 OK
+Date: Sun, 09 May 2021 10:29:58 GMT
+Server: Apache/2.2.15 (CentOS)
+Content-Location: index.en.html
+Vary: negotiate,accept-language
+TCN: choice
+Last-Modified: Sat, 01 May 2021 16:30:14 GMT
+ETag: "821a3-9e6c-5c1473e378606"
+Accept-Ranges: bytes
+Content-Length: 40556
+Content-Type: text/html; charset=UTF-8
+Content-Language: en
+ original-response-headers Date: Sun, 09 May 2021 10:29:58 GMT
+Server: Apache/2.2.15 (CentOS)
+Content-Location: index.en.html
+Vary: negotiate,accept-language
+TCN: choice
+Last-Modified: Sat, 01 May 2021 16:30:14 GMT
+ETag: "821a3-9e6c-5c1473e378606"
+Accept-Ranges: bytes
+Content-Length: 40556
+Connection: close
+Content-Type: text/html; charset=UTF-8
+Content-Language: en
+ charset UTF-8 uncompressed-len 0 net-response-time-onstart 1357 net-response-time-onstop 2178   �l

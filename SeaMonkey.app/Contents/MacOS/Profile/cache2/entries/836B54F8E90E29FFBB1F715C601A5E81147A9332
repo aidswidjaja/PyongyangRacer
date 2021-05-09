@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en"
+      dir="ltr">
+  <head>
+    <title>SeaMonkey 2.53.4 Release Notes</title>
+    <link rel="stylesheet" type="text/css" href="/css/base/template.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/base/content.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/artemia/template.css" title="Artemia Nyos" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/artemia/content.css" title="Artemia Nyos" media="screen">
+    <link rel="icon" href="/images/seamonkey16.png" type="image/png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+
+<link rel="top" href="../../" title="SeaMonkey Project">
+<link rel="up" href="../" title="SeaMonkey Releases">
+
+
+
+  </head>
+  <body id="seamonkeyproject-org">
+    <div id="header"><h1><a href="/" title="Go to seamonkey-project.org" accesskey="1"><img
+      src="/images/template/header-logo.png" height="38" width="260" alt="SeaMonkey Project"></a></h1></div>
+    <div id="breadcrumbs">
+      <a href="../../">Home</a>  &#187; <a href="../../releases/">Download and Releases</a> &#187; <a href="../../releases/2.53.4">2.53.4</a> &#187; <span>Release Notes</span>
+    </div>
+    <div id="content">
+      <div id="side">
+        <ul id="nav">
+	<li><a href="../../">Home</a></li>
+	<li><a href="../../news">News</a></li>
+	<li><a href="../../releases/">Download and Releases</a><ul>
+	<li><a href="../../releases/2.53.4">2.53.4</a><ul>
+	<li><a href="../../releases/seamonkey2.53.4/">Release Notes</a></li>
+</ul></li>
+</ul></li>
+	<li><a href="../../community">Community and Support</a></li>
+	<li><a href="../../doc/">Documentation and Help</a></li>
+	<li><a href="https://addons.thunderbird.net/seamonkey/">Add-Ons</a></li>
+	<li><a href="http://www.zazzle.com/seamonkeyproject">SeaMonkey Shop</a></li>
+	<li><a href="../../donate/">Donate</a></li>
+	<li><a href="../../association/">SeaMonkey Association</a></li>
+	<li><a href="../../dev/">Development</a></li>
+	<li><a href="../../legal/">Legal Resources</a></li>
+	<li><a href="../../about">About</a></li>
+</ul>
+      </div>
+      <div id="mainContent">
+        
+
+<h1>SeaMonkey 2.53.4</h1>
+
+<div class="key-point">
+<p>
+<font color="#ff0000"><b>You MUST absolutely do a full backup of your profile
+before upgrading from a version earlier than SeaMonkey 2.53.1. This version of
+SeaMonkey makes changes to your profile that can't be reverted in cases where
+you need to go back to the older version.</b></font>
+</p>
+
+<p>
+<font color="#ff0000"><b>Automatic upgrades from previous versions are
+currently disabled for this release. Please download the full installer from the
+downloads section and install SeaMonkey 2.53.4 manually over the previous
+version.</b></font>
+</p>
+</div>
+
+<div class="key-point">
+<p>The Mozilla backend code SeaMonkey is based on, now usually incorporates
+breaking changes in every release. This is especially true for the Mozilla Gecko
+add-ons code and the JavaScript interpreter. Consequently, some older extensions
+<em>may</em> no longer function properly. If you experience any problems please
+refer to the troubleshooting section first. Especially try to disable extensions
+first and check if this makes a difference.
+<br>
+<b>Important only if you upgrade from 2.49.5 or an earlier version:</b>
+Due to changes in the user profile, if you have set a master password, you will
+have to remove it <b>before</b> upgrading to SeaMonkey 2.53.4. After a
+successful upgrade, don't forget to manually remove the files key3.db and cert8.db
+in your profile afterwards, as they include credentials and passwords no longer
+protected by a master password. You can find the path to your profile folder
+entering the special <b>about:support</b> URL in a SeaMonkey browser window.
+<br>You can remove your master password by providing an empty password in the
+"Change Master Password" dialog. <b>Do not use the "Reset Password" function.
+You will lose all stored passwords this way.</b>
+<br>
+<b>If you have a SeaMonkey 2.53.1 or 2.53.2 language pack installed you need to
+remove it before upgrading to this version.</b> These language pack versions
+were marked to be compatible with all Seamonkey 2.53.x releases and cause
+breakage when used with a different version. You can then install one of the
+provided 2.53.4 language packs from the download section after
+installation of the base product.
+</p>
+</div>
+
+<div class="key-point">
+<p>
+For SeaMonkey 2.53.4, the following extensions are included.
+<ul>
+  <li>ChatZilla</li>
+  <li>DOM Inspector</li>
+  <li>Lightning</li>
+</ul>
+Beta versions also contain the following extension.
+<ul>
+  <li>SeaMonkey Debug and QA UI</li>
+</ul>
+</p>
+</div>
+
+<div class="key-point">
+<p>
+These release notes describe system requirements, installation instructions,
+and known issues for SeaMonkey 2.53.4 up to/including SeaMonkey 2.53.4.
+These notes are updated when we receive feedback, so please check back
+for new information.
+</p>
+</div>
+
+<h2 id="new">What's New in SeaMonkey 2.53.4</h2>
+<div class="section">
+<p>
+SeaMonkey 2.53.4 contains (among other changes) the following major changes relative to
+<a href="../seamonkey2.53.3/#new">SeaMonkey 2.53.3</a>:
+</p>
+<ul>
+  <li>Upgraded NSS to 3.53.1 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1643859">bug 1643859</a>.
+  </li>
+  <li>Updated to Unicode 11 for SpiderMonkey <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1466471">bug 1466471</a>.
+  </li>
+  <li>Updated bundled Twemoji Mozilla font to v0.5.1 to support newer emojis <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1644346">bug 1644346</a>.
+  </li>
+  <li>Updated how photos are handled in the addressbook <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1641705">bug 1641705</a>.
+  </li>
+  <li>Removed outdated RSS feed handlers <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1643716">bug 1643716</a>.
+  </li>
+  <li>Fix initialisation of TodayPane mini-day, to show the right day <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1479628">bug 1479628</a>.
+  </li>
+  <li>Fixed sizing issue of HTML mail question (askSendFormat) dialog <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1583415">bug 1583415</a>.
+  </li>
+  <li>Update of help page content and links.
+  </li>
+  <li>Various security and general platform fixes.
+  </li>
+</ul>
+
+<p>
+SeaMonkey 2.53.4 contains (among other changes) the following major changes relative to
+<a href="../seamonkey2.49.5/#new">SeaMonkey 2.49.5</a>:
+</p>
+
+<ul>
+  <li>The Bookmarks Manager has switched its name to Library, and now also
+    includes the History list. When invoking History, the Library will be shown
+    with the History list selected. The extensive modifications were needed
+    because of Mozilla Gecko platform API changes.
+  </li>
+  <li>Download Manager has been migrated to a new API. Although it looks pretty
+    much the same as before, the search option is missing and some other minor
+    details work differently. The previous downloads history is removed during
+    the upgrade.
+  </li>
+  <li>The layout panel was added to the CSS Grid tools.
+  </li>
+  <li>TLS 1.3 is the default SSL version now.
+  </li>
+  <li>The only NPAPI plugin which will work with SeaMonkey 2.53.4 is Flash.
+    Support for other NPAPI plugins like Java and Silverlight has been removed.
+    For displaying pdf files in the browser you can use
+    <a href="https://github.com/IsaacSchemm/pdf.js-seamonkey/releases/"> pdf.js-seamonkey</a>
+    from Isaac Schemm.
+  </li>
+  <li>SeaMonkey now uses a new api for formatting regional data like time and
+    date. Default is to use the application locale of the current SeaMonkey
+    build. If you use a language pack or a different OS formatting this is
+    usually not desired. You can change the formatting from the application
+    locale to the regional settings locale (OS) in the preferences dialog under
+    "Appearance".
+  </li>
+</ul>
+
+<p>
+SeaMonkey 2.53.4 uses the same backend as Firefox and contains the relevant
+<a href="https://www.mozilla.org/en-US/security/known-vulnerabilities/firefox/#firefox60.6">Firefox 60.6 security fixes</a>.
+</p>
+<p>
+SeaMonkey 2.53.4 shares most parts of the mail and news code with Thunderbird.
+Please read the
+<a href="https://www.thunderbird.net/en-US/thunderbird/60.0/releasenotes/">Thunderbird 60.0 release notes</a> for
+specific changes and security fixes in this release.
+</p>
+<p>
+Additional important security fixes up to Current Firefox 78.1 ESR and a few
+enhancements have been backported. We will continue to enhance SeaMonkey
+security in subsequent 2.53.x beta and release versions as fast as we are
+able to.
+</p>
+<h3>SeaMonkey-specific changes</h3>
+<ul>
+  <li>SeaMonkey now uses gtk3 on Linux. If you experience a problem because of
+  this please file a bug and link it to
+  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1367257">bug 1367257</a>.
+  Please try another OS theme first. Some of them are buggy and cause problems
+  with SeaMonkey, Thunderbird and Firefox.
+  </li>
+</ul>
+
+</div>
+
+<h2 id="download">Downloading</h2>
+<div class="section">
+The SeaMonkey project provides official versions and language packs of
+SeaMonkey 2.53.4 for Windows, Linux and macOS in US English and
+a small variety of other languages. Community volunteers are also contributing
+builds for other platforms. You can <a href="../2.53.4">download
+SeaMonkey 2.53.4 here</a>.
+</div>
+
+<h2 id="install">System Requirements, Installation and Uninstallation</h2>
+<div class="section">
+Before installing, make sure your computer meets the
+<a href="../../doc/system-requirements">system requirements</a>.<br>
+Please note that the new Windows x64 version will only support Windows 7 x64
+and up. You need to uninstall a previous Windows x86 version if you want to use
+it. Installing the x64 over the old x86 is not supported and does not remove
+the old version which might cause problems later.
+<br>SeaMonkey 2.53.4 will no longer offer to migrate your data from SeaMonkey
+1.x or Mozilla 1.x at the first start after installation (<a
+href="https://bugzilla.mozilla.org/show_bug.cgi?id=689437">bug 689437</a>).
+In order to upgrade from such an old version, install the last SeaMonkey 2.0
+release first, do the one-time profile upgrade, uninstall SeaMonkey 2.0 and
+then install your target release (e.g. this one).<br>
+<b>If you are on an older release we suggest upgrading to SeaMonkey 2.49.5
+first.</b><br>
+You can find more details about installation, profile data and uninstallation
+in our <a href="../../doc/install-and-uninstall">install and uninstall</a>
+document.
+</div>
+
+<h2 id="addons">Extensions (Add-ons) and Themes</h2>
+<div class="section">
+<p>
+Extensions and Themes for SeaMonkey 2.53.4 can be installed from the
+<a href="https://addons.thunderbird.net/seamonkey/">SeaMonkey Add-Ons</a>
+website or the &quot;Get Add-Ons&quot; section in the Add-ons Manager.</p>
+<p>
+Extensions with binary components such as Enigmail only work for the specific
+platform they are released (e.g. win extension for Windows, linux64 for Linux
+64 bits). Besides, matching version of extensions for SeaMonkey may not be the
+latest available of those versions. Therefore, they need to be adjusted for
+each new SeaMonkey release, which also means that an old version of such an
+add-on can break SeaMonkey if you disabled compatibility checking (which e.g.
+happens when you install the Add-on Compatibility Reporter add-on). Please,
+note the following warnings and advice regarding extensions:</p>
+<ul>
+  <li>For <b>Enigmail</b>, please refer to the
+    <a href="https://enigmail.net/index.php/en/home">Enigmail</a> page.
+    <br>The latest supported version is 2.0.9
+    <a href="https://www.enigmail.net/download/release/2.0/enigmail-2.0.9-sm+tb.xpi">
+    Enigmail</a> but there have been some problems reported against it.
+  </li>
+  <li>Adblock Plus 2.9.1 may cause huge memory and CPU consumption and is not
+    recommended or officially supported in this SeaMonkey version. Consider
+    switching to uBlock.
+  </li>
+  <li>Lightbird 0.7.1. is not compatible with this version. The message preview
+    pane will not update itself correctly.
+  </li>
+  <li>The latest 1.16.x working version of uBlock can be found
+    <a href="https://github.com/gorhill/uBlock-for-firefox-legacy/releases">here</a>.
+    Please install the latest legacy version.
+  </li>
+  <li>The latest working version of NoScript Classic 5.x can be found
+    <a href="https://noscript.net/getit">here</a>.
+  </li>
+  <li>Dictionaries in WebExtension formats do <b>not</b> work, even though
+    they appear to install correctly. Support for them will be added at a
+    later date. Please install the latest classic version from the dictionary
+    history.
+  </li>
+  <li>Lightweight themes are no longer provided on the SeaMonkey Add-ons site.
+  </li>
+  <li>Full theme add-ons may need changes because of user interface and internal
+    changes. If you find any problem with themes, contact the theme author.
+    Before reporting a problem with the user interface please make sure to
+    recreate it with either the Classic or Modern theme.
+  </li>
+  <li>Because of security backports which removed obsolete code, Session Manager
+    add-on version 0.8.1.14 or above is required to be compatible with current
+    and future 2.53 releases.
+  </li>
+</ul>
+
+<h2 id="issues">Known Issues</h2>
+<div class="section">
+This list covers some of the known problems with SeaMonkey 2.53.4.
+Please read this before reporting any new bugs.
+<ul>
+  <li>Clearing the browser history during shutdown does currently not work.
+    Please use "Tools->Clear Private Data" as a workaround. The problem is
+    tracked in <a
+    href="https://bugzilla.mozilla.org/show_bug.cgi?id=1621445">bug 1621445</a>
+  </li>
+
+  <li>Opening single new tabs from the Library always loads them in the
+    foreground. The problem is tracked in <a
+    href="https://bugzilla.mozilla.org/show_bug.cgi?id=1619108">bug 1619108</a>
+  </li>
+
+  <li>SeaMonkey will not start under Linux if you downloaded the wrong package.
+    <br>We are providing x86 and x64 versions of SeaMonkey for Linux.
+    For newer distributions you probably need the Linux x64 version.
+  </li>
+
+  <li>Lightning or one of the distributed extensions is not showing up or is
+    disabled under Add-ons.
+    <br> If the extension is disabled and can not be enabled deinstall it. If
+    it does not show up after restart do the following:
+    <ul>
+      <li>Enter "about:config" in the location bar.</li>
+      <li>Enter "extensions.installedDistroAddon" in the search field.</li>
+      <li>Reset the key of the extension not showing up using the popup menu
+         with the mouse. If in doubt just reset all keys, but this might bring
+         back previously uninstalled distributed Add-ons.</li>
+      <li>Restart SeaMonkey.</li>
+    </ul>
+  </li>
+  <li>Unable to connect to secure sites and a certificate error is shown.
+    <br>In 99% of all cases this issue is caused by the same problem. Your
+    antivirus software or custom firewall acts as a man in the middle and
+    intercepts secure https traffic. In order to intercept and scan this
+    encrypted network traffic, it normally uses a vendor specific certificate
+    which is not installed by default in SeaMonkey by the third party software
+    installer. If you want to keep this feature working you need to install one
+    or more certificate(s) from the antivirus software in SeaMonkey. You need
+    to ask your antivirus software vendor where they are located. Consult the
+    SeaMonkey online help to find out how you can import and manage certificates.
+  </li>
+  <li>If you experience a hang and/or get a message box warning that a script
+    is busy when opening the Data Manager try deleting the webappsstore.* files
+    from your profile folder when SeaMonkey is not running. These files contain
+    data stored by websites and will be recreated during the next start. If
+    you are unsure if the information is needed please back up the files before
+    deleting them. The problem is tracked in
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1305624">bug 1305624</a>
+    but so far no coding error has been found.
+    This problem has been reported frequently when trying to manage passwords.
+    But the problem will generally happen just after you open the Data Manager,
+    because this component is also used for managing cookies, site preferences
+    permissions and other settings.
+  </li>
+  <li>If you are running Windows 7 "Send to > Mail recipient" might not work.
+    More information can be found in
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1356902">bug 1356902</a>.
+    As a workaround install the "Microsoft Visual Studio 2015 to 2019"
+    redistributable runtime library. For x86 install the
+    <a href="https://aka.ms/vs/16/release/vc_redist.x86.exe">VS2019 x86 runtime</a>.
+    <br>If you are using the x64 build install the
+    <a href="https://aka.ms/vs/16/release/vc_redist.x64.exe">VS2019 x64 runtime</a>.
+    SeaMonkey was built using the latest VS2019 compiler so make sure to
+    upgrade any older VS2017 runtime.
+  </li>
+  <li>If you experience a delay showing the first page after start, please
+    delete the Safebrowsing folder in your profile. Bad Safebrowsing data may
+    delay showing the first page for up to 30 seconds. The problem is tracked
+    in <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1432274">bug 1432274</a>.
+    This can occur even if you are not using Safebrowsing because the lists are
+    always fetched.
+  </li>
+  <li>SeaMonkey does not currently support the WebExtensions add-on api. Some
+    popular add-ons like NoScript and uBlock Origin are no longer shown because
+    of this on the SeaMonkey add-ons website. You can usually get them from the
+    manufacturers site. WebExtensions support is a planned feature for 2.57.
+    For dictionaries please install the latest non webext version.
+  </li>
+  <li>The SSL 3.0 encryption protocol is no longer supported due to
+    security concerns (<a
+    href="https://bugzilla.mozilla.org/show_bug.cgi?id=1106470">bug
+    1106470</a>). Legacy websites may still rely on it and will not work
+    with the newer TLS 1.x protocols. Contact the website administrator
+    to update their server to resolve the issue at the source.
+  </li>
+  <li>The Remember Passwords add-on breaks password handling. Please disable
+    or uninstall this add-on using the Add-ons Manager.
+  </li>
+  <li>You cannot set up a new Sync account or pair a device anymore (<a
+    href="https://bugzilla.mozilla.org/show_bug.cgi?id=998807">bug 998807</a>).
+  </li>
+  <li><strong>Data loss warning:</strong> If you use a profile with this or
+    any later version and then try to go back to SeaMonkey 2.49.5 or earlier,
+    SeaMonkey will rename your bookmarks and history file to
+    places.sqlite.corrupt and create a new places.sqlite file, effectively
+    resetting your browsing history. This is because the internal format
+    changed and the upgrade process only works in one direction.
+    Additionally, running MailNews with local folders and POP3 mail filters may
+    produce summary files that are not correctly read by previous versions of
+    SeaMonkey. If you decide to go back to a previous version of SeaMonkey, you
+    should do it from a profile backup only.
+  </li>
+  <li>After creating a news account through clicking a news URL, the MailNews
+    account wizard may be broken (the account type will always be News). To
+    work around the problem, set the mail.server.serverX.valid pref (where
+    X is the internal number of the corresponding news account) to true in
+    about:config, or delete the invalid news account (<a
+    href="https://bugzilla.mozilla.org/show_bug.cgi?id=521861">bug 521861</a>).
+  </li>
+  <li>WebRTC has been disabled by default. It needs an add-on to enable it per
+    site. See the
+    <a href="https://github.com/IsaacSchemm/webrtc-permissions-ui-toggle">webrtc-permissions-ui-toggle add-on</a>.
+  </li>
+  <li>Web pages may appear differently in the MailNews feed reader than in the
+    browser (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=662907">bug
+    662907</a>). Workaround: Add a "noscript {display:none}" rule to your
+    <a href="http://kb.mozillazine.org/UserContent.css">userContent.css</a>
+    (note that the Stylish add-on cannot be used here since it does not
+    integrate with the MailNews feed reader).
+  </li>
+  <li>Lightning keyboard shortcuts for accessing the calendar tab from within
+    the MailNews window or from the main menu (Ctrl+Shift+C/D) do not work. (<a
+    href="https://bugzilla.mozilla.org/show_bug.cgi?id=514512">bug 514512</a>).
+  </li>
+  <li>If you try to start SeaMonkey using a locked profile, it will crash (see <a
+    href="https://bugzilla.mozilla.org/show_bug.cgi?id=573369">bug 573369</a>).
+  </li>
+  <li>Windows:
+    <ul>
+      <li>You might not be able to install SeaMonkey in Windows 10 if you have
+        turned on the Windows Defender Smartscreen feature. Your SeaMonkey
+        download will be blocked in the case. To overcome this go to
+        "Windows Security->App & browser control" in the new Windows Settings
+        and set the "Check apps and files" setting to Warn from Block.
+      </li>
+      <li>Antivirus scanners may report that some parts of SeaMonkey (e.g. the
+        file freebl3.dll) are suspicious. If you downloaded SeaMonkey from one
+        of the official download sites, this is a false alarm. You might
+        experience problems with secure websites when this happens. To fix the
+        issue, instruct your antivirus software to ignore these files (and move
+        them out of quarantine) and/or switch to another antivirus software and
+        reinstall SeaMonkey.
+      </li>
+    </ul>
+  </li>
+  <li>Mac:
+    <ul>
+      <li>You might not be able to install SeaMonkey under recent macOS
+        versions. In this case please read <a
+        href="https://support.apple.com/en-gb/guide/mac-help/mh40616/mac">
+        Open a Mac app from an unidentified developer</a> for a solution.
+      </li>
+      <li>When hardware acceleration is off, background colors in the UI
+        (toolbar, status bar etc.) might not update correctly when you switch
+        focus from/to a window. Users running Macs with certain older hardware
+        will experience this even if they haven't turned
+        off hardware acceleration in Preferences (Appearance/Content) (<a
+        href="https://bugzilla.mozilla.org/show_bug.cgi?id=626096">bug 626096</a>).
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="section">
+<ul>
+  <li>
+    Some questions are asked more frequently than others. Have a look at the <a
+    href="https://wiki.mozilla.org/SeaMonkey/FAQ">SeaMonkey FAQ</a>.
+    Maybe your particular problem has already been solved.
+  </li>
+  <li>
+    Some antivirus software keeps detecting our installers as containing a
+    "Trojan" or "Downloader". This is a false positive because of some wrong
+    detection mechanism in the antivirus software. The code in question is
+    actually from 7-Zip and decompresses the installer so that its contents can
+    run and install SeaMonkey. That technology is widely used and probably can
+    be used to compress bad as well as good software, but the 7-Zip code itself
+    is perfectly safe. Mozilla scans all our files routinely when putting them
+    on the FTP server and we assure you that our installers are as clean as the
+    official Firefox downloads that are scanned by the same mechanisms.
+  </li>
+  <li>
+    For security, parts of
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1035091">bug 1035091</a>
+    were ported in
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1411708">bug 1411708</a>.
+    This might cause problems with add-ons like Stylish which use moz-document.
+    Set the preference &quot;layout.css.moz-document.content.enabled&quot; to
+    &quot;true&quot; to overcome this but be aware that this disables the
+    added security fix.
+  </li>
+  <li>
+    Poorly designed or incompatible extensions can cause problems with
+    SeaMonkey, including make it crash, slow down page display, etc.
+    If you encounter strange problems relating to parts of SeaMonkey no longer
+    working, the browser not starting, windows with strange or distorted
+    appearance, degraded performance, etc, you may be suffering from Extension
+    or Theme trouble.
+    Restart SeaMonkey in Safe Mode. On Windows, start using the "Safe Mode"
+    shortcut created in your Start menu or by running
+    <code>seamonkey.exe -safe-mode</code>.
+    On Linux, start with <code>/path-to-seamonkey/seamonkey -safe-mode</code>
+    or first change to the SeaMonkey installation directory and start with
+    <code>./seamonkey -safe-mode</code>, and on macOS, run:
+    <p><code>
+       cd /Applications/SeaMonkey.app/Contents/MacOS/<br>
+       ./seamonkey-bin -safe-mode
+    </code></p>
+    When started in Safe Mode all extensions are disabled and the Default theme
+    is used. Disable the Extension/Theme that is causing trouble and then start
+    normally.
+  </li>
+  <li>
+    If you uninstall an extension that is installed with your user profile
+    (i.e. you installed it from a Web page) and then wish to install it for all
+    user profiles using the -install-global-extension command line flag, you
+    must restart SeaMonkey once to cleanse the profile extensions datasource of
+    traces of that extension before installing with the switch. If you do not do
+    this you may end up with a jammed entry in the Extensions list and will be
+    unable to install the extension globally.
+  </li>
+  <li>
+    If you encounter strange problems relating to bookmarks, downloads, window
+    placement, toolbars, history, or other settings, it is recommended that you
+    try creating a new profile and attempting to reproduce the problem before
+    filing bugs. Create a new profile by running SeaMonkey with the -P command
+    line argument, choose the "Manage Profiles" button and then choose "Create
+    Profile...". Migrate your settings files (Bookmarks, Saved Passwords, etc)
+    over one by one, checking each time to see if the problems resurface. If you
+    do find a particular profile data file is causing a problem, file a bug and
+    attach the file.
+  </li>
+</ul>
+</div>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="section">
+<dl>
+  <dt>What can I do to help?
+    <dd>
+    We need help from developers and the testing community to provide as much
+    feedback as possible to make SeaMonkey even better. Please read these notes
+    and the <a href="http://developer.mozilla.org/en/Bug_writing_guidelines">bug
+    filing instructions</a> before reporting any bugs to
+    <a href="https://bugzilla.mozilla.org/">Bugzilla</a>.
+    </dd>
+  </dt>
+
+  <dt>Why haven't you responded to the mail I sent you?
+    <dd>
+    Use the <a href="http://groups.google.com/group/mozilla.support.seamonkey/topics">newsgroup</a>.
+    The SeaMonkey team reads it regularly, and your email may have gotten lost.
+    </dd>
+  </dt>
+
+  <dt>Where can I get extensions and themes (add-ons)?
+    <dd>
+    <a href="https://addons.thunderbird.net/seamonkey/extensions/">Extensions</a>
+    and <a href="https://addons.thunderbird.net/seamonkey/themes/">Themes</a> can be
+    downloaded from <a href="https://addons.thunderbird.net/seamonkey/">SeaMonkey
+    Add-ons</a>.
+    </dd>
+  </dt>
+
+  <dt>Who makes SeaMonkey?
+    <dd>
+    Lots of people. See Help-&gt;About SeaMonkey, contributors for a
+    list of some of the people who have contributed to Mozilla and SeaMonkey.
+    </dd>
+  </dt>
+
+  <dt>Where's the SeaMonkey 2.53.4 source code?
+    <dd>
+    A tarball of the SeaMonkey 2.53.4 source code is available at the
+    <a href="../2.53.4#source">download page</a>.
+    The latest development code can be obtained from the
+    <a href="http://developer.mozilla.org/en/Comm-central_source_code_(Mercurial)">source
+    repository</a>.
+    SeaMonkey-specific source is in the "suite" directory. Please follow the
+    <a href="http://developer.mozilla.org/en/docs/Build_Documentation">build
+    instructions</a>.
+    We will provide source code for 2.53.1 and future releases on
+    <a href="https://gitlab.com/seamonkey-project">gitlab</a>.
+    </dd>
+  </dt>
+
+  <dt>Can I remove the tool- and menubar grippies?
+    <dd>
+    You can remove the tool- and menubar grippies by setting the preference
+    &quot;browser.toolbars.grippyhidden&quot; to &quot;true&quot;.
+    </dd>
+  </dt>
+</dl>
+</div>
+
+<h2 id="resources">Other Resources and Links</h2>
+<div class="section">
+The following resources contain useful information about SeaMonkey 2.53.4:
+<ul>
+  <li><a href="../../doc/">SeaMonkey Documentation &amp; Help</a></li>
+  <li><a href="http://kb.mozillazine.org/">MozillaZine Knowledge Base</a></li>
+<!--  <li><a href="https://wiki.mozilla.org/SeaMonkey/Features/2.53.4">&quot;SeaMonkey/Features/2.53.4&quot;
+    wiki page</a>
+  </li> --->
+  <li><a href="http://developer.mozilla.org/En/Extensions_support_in_SeaMonkey_2">For
+    extension developers</a>
+  </li>
+</ul>
+</div>
+
+
+
+        <address>                
+        </address>
+
+      </div>
+    </div>
+
+    <div id="footer">
+      <ul id="footer-menu">
+        <li><a href="../../sitemap">Site Map</a></li>
+        <li><a href="http://www.mozilla.org/security/">Security Updates</a></li>
+        <li><a href="../../about">About SeaMonkey</a></li>
+        <li><a href="../../about#contact">Contact Us</a></li>
+      </ul>
+      <p class="tLicense">SeaMonkey and the SeaMonkey logo are <a href="../../legal/trademark">registered trademarks</a> of the <a href="http://www.mozilla.org/foundation/">Mozilla Foundation</a>.</p>
+      <p class="tLicense">Portions of this content are &copy; 1998&#8211;2021 by individual mozilla.org contributors; content available under a Creative Commons license | <a href="http://www.mozilla.org/foundation/licensing/website-content.html">Details</a>.</p>
+            <ul class="site-tools">
+        <li>Last modified May 01, 2021</li>
+        <li><a href="https://hg.mozilla.org/SeaMonkey/seamonkey-project-org/log/default/src/releases/seamonkey2.53.4/index.en.html">Document History</a></li>
+      </ul>
+    </div>
+
+  </body>
+</html>>éªx¬      `óπê`óπëBÛÛË`òø   <    :https://www.seamonkey-project.org/releases/seamonkey2.53.4/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Sun, 09 May 2021 10:29:37 GMT
+Server: Apache/2.2.15 (CentOS)
+Content-Location: index.en.html
+Vary: negotiate
+TCN: choice
+Last-Modified: Sat, 01 May 2021 16:30:56 GMT
+ETag: "82353-7755-5c14740c168d7"
+Accept-Ranges: bytes
+Content-Length: 30549
+Content-Type: text/html; charset=UTF-8
+Content-Language: en
+ original-response-headers Date: Sun, 09 May 2021 10:29:37 GMT
+Server: Apache/2.2.15 (CentOS)
+Content-Location: index.en.html
+Vary: negotiate
+TCN: choice
+Last-Modified: Sat, 01 May 2021 16:30:56 GMT
+ETag: "82353-7755-5c14740c168d7"
+Accept-Ranges: bytes
+Content-Length: 30549
+Connection: close
+Content-Type: text/html; charset=UTF-8
+Content-Language: en
+ charset UTF-8 uncompressed-len 0 net-response-time-onstart 1486 net-response-time-onstop 1522   wU
