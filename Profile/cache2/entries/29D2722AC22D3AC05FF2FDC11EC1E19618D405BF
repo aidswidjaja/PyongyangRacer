@@ -1,0 +1,560 @@
+/* mozilla.org Rustico Theme Content Styles
+ * Design by silverorange
+ * Markup Reference classes organized by fantasai
+ */
+
+/* Suggested order:
+ * display
+ * list-style
+ * position
+ * float
+ * clear
+ * width
+ * height
+ * margin
+ * padding
+ * border
+ * background
+ * color
+ * font
+ * text-decoration
+ * text-align
+ * vertical-align
+ * white-space
+ * other text
+ * content
+ *
+ */
+
+/* TOC:
+   Body
+   Random HTML Styles
+     Forms
+   General Structure
+   Navigation
+   Quotations
+   Comments and Other Asides
+   Emphasis
+   Computers - General
+   Code
+   Examples and Figures
+   Q and A (FAQ)
+   Tables
+   Meta
+*/
+
+/* Random HTML Styles */
+
+hr {
+  height: 1px;
+  background-color: #000;
+  color: #000;
+  margin: 2em 0;
+}
+
+.hide { display: none; }
+
+ul.spaced li, ol.spaced li {
+  margin-bottom: 0.5em;
+}
+
+/* General Structure */
+body, td, th, input { /* redundant rules for bad browsers  */
+  font-family: verdana, sans-serif;
+  font-size: x-small;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+  font-size: small;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.2em 0;
+  border-bottom: 1px solid #ccc;
+  font-family: arial, verdana, sans-serif;
+}
+li h1, li h2, li h3, li h4, li h5, li h6 {
+  border: none;
+}
+
+#header h1 { border: 0; }
+
+h1 { font-size: 160%; font-weight: normal; }
+h2 { font-size: 150%; font-weight: normal; }
+h3 { font-size: 120%; }
+h4 { font-size: 100%; }
+h5 { font-size: 90%; }
+h6 { font-size: 90%; border: 0; }
+
+h1:target, h2:target, h3:target, h4:target, h5:target, h6:target {
+  background: #C4EFA1;
+}
+
+/* Navigation */
+
+:link { color: #039; }
+:visited { color: #636; }
+:link:hover, :visited:hover { color: #333; }
+:link:active, :link:active { color: #000; }
+
+/* Quotations */
+
+
+/* Comments and other Asides */
+.note {
+  color: #666;
+}
+
+.first {
+  margin-top: 0;
+}
+
+.remark {
+  color: #666;
+}
+
+.sidenote {
+  border: #666;
+}
+
+.footnote {
+  color: #666;
+}
+
+.key-point {
+  background: #e4ecec;
+  padding: 15px 15px 7px 15px;
+  margin-bottom: 1em;
+  border-radius: .5em;
+  box-shadow: 2px 2px 2px #c2c6c6;
+  overflow: auto;
+} * html .key-point { height: 1px; }
+.key-point:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.key-point h2, .key-point h3, .key-point h4, .key-point h5 {
+  border: none;
+  margin-top: 0;
+  color: #4C5C5C;
+}
+
+.news dt {
+  font-weight: normal;
+  color: #666;
+}
+.news dt a {
+  font-weight: bold;
+}
+
+ul.compact {
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+/* Emphasis */
+
+div.important,
+p.important {
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #FF9999;
+  border-radius: 8px;
+  background: #FFFF99;
+  color: black;
+  font-size: 1.1em;
+  box-shadow: #D6D6D2 1px 1px;
+}
+
+.shout {
+  font-size: 145%;
+  color: red;
+}
+
+/* Computers - General */
+
+kbd {
+  margin: 0.1em;
+  padding: 0.1em;
+  border: 1px #ccc;
+}
+
+kbd.command,
+code.command {
+  color: #6B5839;
+}
+
+/* Code */
+
+pre.code {
+  padding: 1em;
+  background: #EEECF6;
+}
+
+code > em,
+code > strong,
+pre.code > em,
+pre.code > strong {
+  font-style: normal;
+}
+
+/* Examples and Figures */
+
+div.example {
+  border-color: #554FA0;
+}
+div.example:before {
+  color: #666;
+}
+
+/* Q and A (FAQ) */
+
+ol.faq li a {
+  text-decoration: none;
+  border-bottom: 1px dotted #6C98EE;
+}
+
+ol.faq li a:hover {
+  border-color: #039;
+}
+
+/* Tables */
+table.data thead th {
+  background: #e4ecec;
+  empty-cells: hide;
+}
+
+table.data th,
+table.data td {
+  border: 1px solid #ccc;
+  font-size: 100%;
+  line-height: 130%;
+}
+
+tr.odd {
+  background: #F5F5F5;
+}
+
+table.screens td {
+  text-align: center;
+  width: 45%;
+}
+
+table.screensmatrix tr > td {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+ul.screenslist img {
+  display: block;
+  margin: 1em;
+}
+
+/* Meta */
+
+address {
+  color: #666;
+}
+
+/* Product Specific CSS */
+
+.key-point h1, .key-point h2, .key-point h3 {
+  margin: 0;
+}
+
+#product-desc p {
+  padding-left: 175px;
+  margin-top: 0;
+}
+
+#product-desc ul {
+  padding-left: 190px;
+  margin-bottom: 0;
+}
+
+#product-side {
+  padding-top: 85px;
+}
+
+#product-side, .key-info-side {
+  margin-left: 65%;
+}
+
+#product-side ul, .key-info-side ul {
+  margin-left: 0;
+  padding-bottom: 0;
+  padding-left: 20px;
+}
+
+#product-side li, .key-info-side li {
+  padding-bottom: 0.2em;
+}
+
+#product-desc {
+  padding: 0;
+  color: #4C5C5C;
+  width: 60%;
+  float: left;
+  line-height: 140%;
+}
+
+.key-info-stable {
+  padding: 0.2em 0;
+  width: 48%;
+  float: left;
+  line-height: 140%;
+}
+
+.key-info-donate {
+  margin-left: 52%;
+  text-align: center;
+}
+
+.key-info-desc {
+  padding: 0.2em 0;
+  width: 60%;
+  float: left;
+  line-height: 140%;
+}
+
+.product-seamonkey {
+  background: url("/images/seamonkey-screen.png") 7px 93px no-repeat;
+}
+
+.download h3 {
+  color: #1D9101;
+  font-weight: bold;
+  border: none;
+  margin: 0;
+  font-size: 140%;
+}
+
+.download h3 :link,
+.download h3 :visited,
+.download h3 :link:active, .download h3 :visited:active {
+  color: #1D9101;
+}
+
+.download h3 :link:hover, .download h3 :visited:hover {
+  color: #156B01;
+}
+
+.download li {
+  padding: 0;
+  margin: 0;
+}
+.download ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.download {
+  background: #C4EFA1 url("/images/box/download_arrow.gif") top right no-repeat;
+  padding: 15px 15px 20px 15px;
+  margin-bottom: 1em;
+  border-radius: .5em;
+  box-shadow: 2px 2px 2px #afce90;
+  max-width: 530px;
+}
+#download:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+.download-div {
+  width: 50%;
+  float: left;
+}
+.download-fieldset {
+  border-radius: .5em;
+}
+
+#download-win, .download-win {
+  list-style-image: url("/images/ico-win.png");
+}
+#download-linux, .download-linux {
+  list-style-image: url("/images/ico-tux.png");
+}
+#download-mac, .download-mac {
+  list-style-image: url("/images/ico-osx-uni.png");
+}
+
+.download .other a:link, .download .other a:visited { color: #666; }
+.download .other a:hover { color: #000; }
+.download .other {
+  padding-top: 3px;
+  font-size: 75%;
+  font-style: italic;
+}
+
+.download .main {
+  font-weight: bold;
+}
+
+.configParent {
+  display: block;
+  font-size: 85%;
+}
+
+.mozillapower {
+  float: right;
+  margin: .2em 0 .2em .5em;
+}
+
+/* news */
+
+h4.newsdate {
+  margin-top: 2.5em;
+}
+
+div.feedlink {
+  float: right;
+  font-size: 16px;
+}
+div.feedlink img {
+  vertical-align: bottom;
+}
+
+/* donation page */
+
+.thanksbox {
+  background-color: #000089;
+  color: #FFFFFF;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid #000000;
+}
+
+/* release pages */
+
+.release-date {
+  text-align: right;
+  margin-top: 0;
+}
+
+.key-side {
+  float: right;
+  margin-left: 1em;
+}
+
+#old {
+  font-size: smaller;
+}
+
+table.downloads {
+  width: 97%;
+}
+
+table.downloads thead th {
+  white-space: nowrap;
+}
+
+table.downloads th,
+table.downloads td {
+  padding: 5px 15px 5px 5px;
+}
+
+table.downloads tr:target td {
+  background: #C4EFA1;
+}
+table.downloads td.curVersion {
+ font-weight: bold;
+}
+
+table.downloads th {
+  text-align: left;
+}
+
+td .download-win,
+td .download-linux,
+td .download-mac {
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 2px 0 2px 18px;
+  display: block;
+}
+td .download-win {
+  background-image: url("/images/ico-win.png");
+}
+td .download-linux {
+  background-image: url("/images/ico-tux.png");
+}
+td .download-mac {
+  background-image: url("/images/ico-osx-uni.png");
+}
+
+/* relnote README pages */
+
+.fieldset  {
+  border-top: thin solid rgb(223,220,217);
+  border-right: thin solid rgb(178,176,174);
+  border-bottom: thin solid rgb(178,176,174);
+  border-left: thin solid rgb(223,220,217);
+  padding: .1em 1em 0em 0em;
+  margin: 2em 0em 1.2em .2em;
+  background-color: rgb(217, 219, 225);
+  border-radius: .4em;
+}
+
+.fieldset:hover {
+  background-color: rgb(213, 214, 225);
+}
+
+.fieldset ul {
+  margin-top: 0em;
+}
+
+.fieldset li {
+  margin-right: 1.5em;
+}
+
+.fieldset ul :link  {
+  font-weight: normal;
+  color: #554FA0;
+}
+
+.fieldset ul :visited {
+  font-weight: normal;
+}
+
+.legend  {
+  display: inline;
+  position: relative;
+  top: -1.0em;
+  margin-left: 1.8em;
+  padding: .2em .8em .2em .8em;
+  font-size: larger;
+  font-weight: bolder;
+  color: rgb(0, 51, 153);
+  letter-spacing: .1em;
+  background-color: white;
+  border-radius: .6em .6em .2em .2em;
+  opacity: .7;
+  border-top: thin solid rgb(223,220,217);
+  border-right: thin solid rgb(178,176,174);
+  border-bottom: thin solid rgb(178,176,174);
+  border-left: thin solid rgb(223,220,217);
+}
+áwrÂÀ      `——`——Bóé`˜”Q   :    :https://www.seamonkey-project.org/css/artemia/content.css necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Sun, 09 May 2021 07:43:38 GMT
+Server: Apache/2.2.15 (CentOS)
+Last-Modified: Sat, 01 May 2021 16:30:13 GMT
+ETag: "82196-2042-5c1473e2bca1f"
+Accept-Ranges: bytes
+Content-Length: 8258
+Content-Type: text/css
+Content-Language: en
+ original-response-headers Date: Sun, 09 May 2021 07:43:38 GMT
+Server: Apache/2.2.15 (CentOS)
+Last-Modified: Sat, 01 May 2021 16:30:13 GMT
+ETag: "82196-2042-5c1473e2bca1f"
+Accept-Ranges: bytes
+Content-Length: 8258
+Connection: close
+Content-Type: text/css
+Content-Language: en
+ uncompressed-len 0 net-response-time-onstart 725 net-response-time-onstop 726    B

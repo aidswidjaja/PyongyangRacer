@@ -1,0 +1,32 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version:0.18t:$
+Arch:x86_64-gcc3:$
+
+[PLUGINS]
+Flash Player.plugin:$
+/Users/Adrian/git/PyongyangRacer/SeaMonkey.app/Contents/Resources/plugins/Flash Player.plugin:$
+32.0.0.303:$
+1576047657000:0:0:0:$
+Shockwave Flash 32.0 r0:$
+Shockwave Flash:$
+2
+0:application/futuresplash:FutureSplash Player:spl:$
+1:application/x-shockwave-flash:Shockwave Flash:swf:$
+
+[INVALID]
+/Library/Internet Plug-Ins/SharePointWebKitPlugin.webplugin:$
+1286871263000:$
+/Library/Internet Plug-Ins/SharePointBrowserPlugin.plugin:$
+1286871268000:$
+/Library/Internet Plug-Ins/Silverlight.plugin:$
+1449903684000:$
+/Library/Internet Plug-Ins/MeetingJoinPlugin.plugin:$
+1550191346402:$
+/Library/Internet Plug-Ins/JavaAppletPlugin.plugin:$
+1592465045000:$
+/Users/Adrian/Library/Internet Plug-Ins/.DS_Store:$
+1493259438000:$
+/Users/Adrian/git/PyongyangRacer/SeaMonkey.app/Contents/Resources/plugins/flashplayer.xpt:$
+1574463822000:$

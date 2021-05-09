@@ -1,7 +1,7 @@
 # Pyongyang Racer
 > "Don't stare at me, I'm on duty."
 
-[Pyongyang Racer](https://en.wikipedia.org/wiki/Pyongyang_Racer) (publicly available at http://www.pyongyangracer.co/) is North Korea's only publicly-available video game, produced by students at Kim Chaek University of Technology. Play the game at [pyracer.adrian.id.au](https://py.adrian.id.au) or by loading the SeaMonkey application bundled in the GitHub repository.
+[Pyongyang Racer](https://en.wikipedia.org/wiki/Pyongyang_Racer) (publicly available at http://www.pyongyangracer.co/) is North Korea's only publicly-available video game, produced by students at Kim Chaek University of Technology. 
 
 ![PyongyangRacer](https://user-images.githubusercontent.com/36395320/117536406-2c24c400-b03e-11eb-8c3b-842d21eba56f.jpg)
 
@@ -10,9 +10,11 @@
 - Download the Pyongyang Racer application from the [Releases](https://github.com/aidswidjaja/PyongyangRacer/releases) page.
 - Open the application and play :)
 
+Note: you must be connected to the Internet to play.
+
 ## Developer notes
 
-Unfortunately, it is a Flash game and we all know what happened to that... Furthermore, it doesn't even appear it has been archived in [Flashpoint](https://bluemaxima.org/flashpoint/). The only copy I could find is this one on [swfchan](http://swfchan.com/29/143906/?Pyongyang+Racer+-+Koryo+Tours.swf) which has incorrect metadata, has a corrupt screenshot, and was last seen online in 2014.
+Unfortunately, it is a Flash game and we all know what happened to that... The only copy I could find is this one on [swfchan](http://swfchan.com/29/143906/?Pyongyang+Racer+-+Koryo+Tours.swf) and [Flashpoint](https://bluemaxima.org/flashpoint/) which has incorrect metadata, has a corrupt screenshot, and was last seen online in 2014. And the SWF doesn't even work (see below for why).
 
 The `.swf` file is served publicly from the website at `http://www.pyongyangracer.co/PYracer.swf`, however Microsoft IIS/8.5 doesn't like serving `.swf` files and throws a 403 Forbidden error. There was no easy way to get hold of the `.swf` file. This means that should the website go down, all traces of Pyongyang Racer could be lost, or buried deep in the web without any easy way of getting to it. Which is why I have taken it upon myself to serve my comrades and preserve this beautiful game! (Also my Modern History class has been meming over it so yea that too).
 
@@ -27,6 +29,12 @@ Note: I changed my User Agent string from Seamonkey/ to Firefox for better compa
 To ensure preservation, I'm running my own instance of the [Pyongyang Racer website](https://pyongyangracer.co) at [pyracer.adrian.id.au](https://pyracer.adrian.id.au). However, it still needs to be accessed from a special SeaMonkey bundle that I have included in `dist`.
 
 Using that SeaMonkey version with the Flash plugin from Flashpoint Infinity already installed, means that it is easily portable and users can play Pyongyang Racer with minimal setup.
+
+Unfortunately, the SWF file is reliant on other resources from the web server - including soundtracks, binaries, and symbol files which are not included (e.g http://pyongyangracer.co/PreGame.mp3). The SWF on swfchan, Flashpoint, and virtually all SWF versions are reliant on external assets. This is most likely due to SWFObject intefering with the resulting SWF.
+
+For now at least, the original web server is still online, and the SWF file is on its own sitting there - only succeding at the splash screen. It may be possible to get all resources for it, but I don't have the time to work on that. For now packaging a version of SeaMonkey to play Pyongyang Racer is good enough for me.
+
+Technically speaking, the web browser can play any Flash game, but I would highly recommend to use Flashpoint instead due to the numerous security issues this presents. This is effectively a quick and dirty solution that I made up in 2 days.
 
 ### Useful information
 
