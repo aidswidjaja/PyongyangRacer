@@ -26,7 +26,7 @@ curl 'http://pyongyangracer.co/PYracer.swf' -H 'User-Agent: Mozilla/5.0 (Macinto
 
 Note: I changed my User Agent string from Seamonkey/ to Firefox for better compatibility on other websites. My actual User Agent string was `Mozilla/5.0 (Macintosh; Intel Mac OS X 10.0; rv:60.0) Gecko/20100101 Firefox/60.0 SeaMonkey/2.53.4` but I doubt this would affect the 200 OK response from the curl command.
 
-To ensure preservation, I'm running my own instance of the [Pyongyang Racer website](https://pyongyangracer.co) at [pyracer.adrian.id.au](https://pyracer.adrian.id.au). However, it still needs to be accessed from a special SeaMonkey bundle that I have included in `dist`.
+To ensure preservation, I'm running my own instance of the [Pyongyang Racer website](https://pyongyangracer.co) at [pyracer.adrian.id.au](https://pyracer.adrian.id.au). However, it still needs to be accessed from a special SeaMonkey bundle that I have included in `dist`. The SWF is hosted on the site but does not have access to external assets it's trying to use for some reason.
 
 Using that SeaMonkey version with the Flash plugin from Flashpoint Infinity already installed, means that it is easily portable and users can play Pyongyang Racer with minimal setup.
 
@@ -35,6 +35,10 @@ Unfortunately, the SWF file is reliant on other resources from the web server - 
 For now at least, the original web server is still online, and the SWF file is on its own sitting there - only succeding at the splash screen. It may be possible to get all resources for it, but I don't have the time to work on that. For now packaging a version of SeaMonkey to play Pyongyang Racer is good enough for me.
 
 Technically speaking, the web browser can play any Flash game, but I would highly recommend to use Flashpoint instead due to the numerous security issues this presents. This is effectively a quick and dirty solution that I made up in 2 days.
+
+### Decompliation
+
+I used [JPEXS Decompiler](https://github.com/jindrapetrik/jpexs-decompiler) to extract model meshes and other assets used in the game, as well as The Unarchiver for purely image and sound assets.
 
 ### Useful information
 
