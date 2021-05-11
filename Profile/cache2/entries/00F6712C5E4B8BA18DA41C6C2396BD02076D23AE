@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <base href="/login/" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=.85">
+    <title>Authentication Portal</title>
+    <!--[if IE]>
+    <script type="text/javascript">
+        (function() {
+            var baseTag = document.getElementsByTagName('base')[0];
+            if (!(/^http/i).test(baseTag.href)) {
+                baseTag.href = location.protocol + '//' +  location.host +  baseTag.href;
+            }
+            baseTag.href = baseTag.href;
+        })();
+    </script>
+    <![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/latofonts.css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" href="css/ie10-viewport-bug-workaround.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="javascript:void(0);"><img class="logo" src="images/logo-pan-ced5d5.png" alt=""> <span>Authentication Portal</span></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="auth_portal container">
+      <div class="row">
+        <h1 id="page_title">Login Required</h1>
+      </div>
+      <div class="row">
+        <div class="user_id instructions col-md-8">
+          <p>The resource you are trying to access requires proper user identification.</p>
+          <p>Please enter your credentials.</p>
+          <p id="authEnforcedMsg"></p>
+          <!-- Note: uncomment this line below to add info link
+          <p><a href="javascript:void(0);">Why am I seeing this?</a></p>
+          -->
+        </div>
+        <div class="login_fields col-md-4">
+          <div id="formdiv">
+            <form name="login_form" id="login_form" method="post">
+<input type="hidden" name="inputStr" value="">
+<input type="hidden" name="escapeUser" value="">
+<input type="hidden" name="preauthid" value="">
+<div id="taLogin">
+<table>
+ <tr id="dUserName">
+ <td id="userTitle">User</td>
+ <td>
+   <input type="text" id="user" name="user" size="19">
+ </td>
+ </tr>
+ <tr>
+   <td id="passwdTitle">Password</td>
+ <td>
+   <div id="dInputStr" style="display: none;">
+   <br>
+   </div>
+  <input type="password" maxlength="255" size="19" id="passwd" name="passwd">
+ </td>
+ </tr>
+ <tr>
+  <td id="buttonOffset"></td>
+  <td>
+   <input class="buttonFixed" type="submit" id="submit" name="ok" value="Login">
+  </td>
+  </tr>
+</table>
+</div>
+<div id="dError" class="msg" style="display:none"></div>
+</form>
+<!--[if IE]>
+    <script type="text/javascript">
+        (function() {
+            var baseTag = document.getElementsByTagName('base')[0];
+            if (!(/^http/i).test(baseTag.href)) { // in case browser already translate to absolute path
+                baseTag.href = location.protocol + '//' +  location.host +  baseTag.href;
+            }
+            baseTag.href = baseTag.href; // IE9 not correctly loading resources issue.
+        })();
+    </script>
+<![endif]-->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+<![endif]-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+ var username = "";
+ var errMsg = "";
+ var respStatus = "";
+ var respMsg = "";
+ var authEnforcedMsg = " ";
+ var privatebrowsing = "";
+ function submitClicked() {
+  $('#dError').html('');
+  $('#dError').hide();
+  $('#formdiv').css('visibility', 'hidden');
+  var thisForm = document.getElementById('login_form');
+  thisForm.inputStr.value = "";
+  thisForm.preauthid.value = "";
+  thisForm.escapeUser.value = thisForm.user.value.replace(/\\/g, "\\\\");
+ }
+ function onClickHandler() {
+  submitClicked();
+ }
+ $(document).ready(function() {
+   $('#user').val(username);
+   if ($('#user').val() == '') {
+     $('#user').focus();
+   }
+   $('#dError').hide();
+   if (respStatus == 'Error') {
+      if (respMsg != '') {
+       errMsg += '<br>';
+       errMsg += '<li>' + respMsg + '</li>';
+      }
+   } else if (respStatus == 'Challenge') {
+      $('#dUserName, #passwdTitle, #buttonOffset').hide();
+      $('#dInputStr').show();
+      $('#dInputStr').html(respMsg);
+   }
+   if (errMsg != '') {
+      $('#dError').show();
+      $('#dError').html(errMsg);
+   }
+    if (privatebrowsing != '') {
+      $('#dError').show();
+      $('#dError').html(errMsg+ '<br>' + privatebrowsing);
+   }
+   if (authEnforcedMsg != '') {
+      $('#authEnforcedMsg').html(authEnforcedMsg);
+   }
+   $('#submit').attr('disabled', true);
+   $('#user').focus();
+   $('#login_form').bind('keyup click', function() {
+   if (!$('#user').val() || !$('#passwd').val()) {
+       $('#submit').attr('disabled', true);
+   } else {
+       $('#submit').attr('disabled', false);
+       $('#dError').hide();
+   }
+   });
+   $('#login_form').submit(function() {
+           submitClicked();
+   });
+   });
+   $(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload();
+        }
+   });
+   if(typeof(Storage) != "undefined") {
+       var orig_url = "http://www.google-analytics.com/ga.js";
+       try { 
+        sessionStorage.setItem ("isoffline", 0); 
+        if(orig_url != "")
+           sessionStorage.setItem("origurl", orig_url); 
+       } catch(e) {
+            privatebrowsing = "This page is not compatible in private browsing.                Please turn off private browsing and reload this page";
+       }
+    }
+</script>
+
+
+            <!-- Note: uncomment this section below to add help links
+            <ul>
+              <li><a href="javascript:void(0);">Forgot password</a></li>
+              <li><a href="javascript:void(0);">Change password</a></li>
+              <li><a href="javascript:void(0);">Need help?</a></li>
+            </ul>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+      // Customizations - pass in values below
+      var favicon = '';
+      var logo = '';
+      var navbar_text_color = '';
+      var navbar_bg_color = '';
+      var bg_color = '';
+      var auth_portal_name = '';
+      var page_title = '';
+
+      /* --- BEGIN Customizations - replacement code --- */
+      $(document).ready(function() {
+        if ((favicon != null) && (favicon != '')) {
+          $('link[rel="shortcut icon"]').attr('href', favicon);
+        }
+
+        if ((logo != null) && (logo != '')) {
+          $('.navbar-brand .logo').attr('src', logo);
+        }
+
+        if ((navbar_text_color != null) && (navbar_text_color != '')) {
+          $('.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a > .nav-carat').css('color', navbar_text_color);
+
+          $('.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a > .nav-carat').css('opacity', '.7');
+
+          $('.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a > .nav-carat').mouseover(function() {
+            $(this).css('opacity', '1');
+          });
+
+          $('.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a > .nav-carat').mouseout(function() {
+            $(this).css('opacity', '.7');
+          });
+        }
+
+        if ((navbar_bg_color != null) && (navbar_bg_color != '')) {
+          $('.navbar-default').css('background', navbar_bg_color);
+        }
+
+        if ((bg_color != null) && (bg_color != '')) {
+          $('body').css('background', bg_color);
+        }
+
+        if ((auth_portal_name != null) && (auth_portal_name != '')) {
+          $('.navbar-brand span').html(auth_portal_name);
+        }
+
+        if ((page_title != null) && (page_title != '')) {
+          $('#page_title').html(page_title);
+        }
+      });
+      /* --- END Customizations - replacement code --- */
+
+    </script>
+  </body>
+</html>
+ ¼¤ùVs      `˜µ†`˜µ†Bô¢Ž       q    :https://cportal.staloysius.nsw.edu.au:6082/php/uid.php?vsys=1&rule=3&url=http://www.google-analytics.com%2fga.js necko:classified 1 strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAAAAgAAAAAAAAAAAAAAAAAAAAAB4vFIJp5wRkeyPxAQ9RJGKPqbqVvKO0mKuIl8ec8o/uhmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAhoMIIIZDCCB0ygAwIBAgIQBR/uHbfrlqJmrJ11owwPNjANBgkqhkiG9w0BAQsFADBNMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMScwJQYDVQQDEx5EaWdpQ2VydCBTSEEyIFNlY3VyZSBTZXJ2ZXIgQ0EwHhcNMjAwMjA2MDAwMDAwWhcNMjIwNDExMTIwMDAwWjB8MQswCQYDVQQGEwJBVTEYMBYGA1UECBMPTmV3IFNvdXRoIFdhbGVzMRMwEQYDVQQHEwpLaXJyaWJpbGxpMRwwGgYDVQQKExNTdCBBbG95c2l1cyBDb2xsZWdlMSAwHgYDVQQDDBcqLnN0YWxveXNpdXMubnN3LmVkdS5hdTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANKVh9WmgzoQPCERFD5dD1xZqxGjyX5q+5ulppxc8PIkICuAu5fe0RAShhE4K1YmAkTX3uSzsdXDuPptj8T6KfriP8VVZ9sGIo6jPBXicrog4tXi4vg8zug4brArugEwiBhhXMWZ5vPYHaIlO3YO6aHXCe4IKENdAT0md+bHaK3KSMHPetk9PE434nIt8l2MrmvBxwEltuW1lW/Hprwm7ukAnB5XZ3oPLEBKHXnmRwvsz7LV+laNmQkEVmd5BoTCFa72iYpfRBy52HRbf5nmRWhWmWk1GwXHd19sSxxJgXMBj1VKUipMSHDwfyMfT2IaxbHHdgBnZRV1c8XReNXIcdECAwEAAaOCBQ8wggULMB8GA1UdIwQYMBaAFA+AYRyCMWHVLyjnjUY4tCzhxtniMB0GA1UdDgQWBBTUaPMLySdtNIVeoFQp/gvubi2BjzCCAc4GA1UdEQSCAcUwggHBghcqLnN0YWxveXNpdXMubnN3LmVkdS5hdYIfY2xpY2t2aWV3LnN0YWxveXNpdXMubnN3LmVkdS5hdYIfY29tbXVuaXR5LnN0YWxveXNpdXMubnN3LmVkdS5hdYIdZGVzdGlueS5zdGFsb3lzaXVzLm5zdy5lZHUuYXWCGWpzcy5zdGFsb3lzaXVzLm5zdy5lZHUuYXWCHW1hbnJlc2Euc3RhbG95c2l1cy5uc3cuZWR1LmF1gh5wYXBlcmN1dC5zdGFsb3lzaXVzLm5zdy5lZHUuYXWCH3NjaG9vbGJveC5zdGFsb3lzaXVzLm5zdy5lZHUuYXWCFXN0YWxveXNpdXMubnN3LmVkdS5hdYIfc3lubW9iaWxlLnN0YWxveXNpdXMubnN3LmVkdS5hdYIcc3lud2ViLnN0YWxveXNpdXMubnN3LmVkdS5hdYIZdnBuLnN0YWxveXNpdXMubnN3LmVkdS5hdYIZd3d3LnN0YWxveXNpdXMubnN3LmVkdS5hdYIabWFpbC5zdGFsb3lzaXVzLm5zdy5lZHUuYXWCImF1dG9kaXNjb3Zlci5zdGFsb3lzaXVzLm5zdy5lZHUuYXUwDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjBrBgNVHR8EZDBiMC+gLaArhilodHRwOi8vY3JsMy5kaWdpY2VydC5jb20vc3NjYS1zaGEyLWc2LmNybDAvoC2gK4YpaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL3NzY2Etc2hhMi1nNi5jcmwwTAYDVR0gBEUwQzA3BglghkgBhv1sAQEwKjAoBggrBgEFBQcCARYcaHR0cHM6Ly93d3cuZGlnaWNlcnQuY29tL0NQUzAIBgZngQwBAgIwfAYIKwYBBQUHAQEEcDBuMCQGCCsGAQUFBzABhhhodHRwOi8vb2NzcC5kaWdpY2VydC5jb20wRgYIKwYBBQUHMAKGOmh0dHA6Ly9jYWNlcnRzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydFNIQTJTZWN1cmVTZXJ2ZXJDQS5jcnQwDAYDVR0TAQH/BAIwADCCAX8GCisGAQQB1nkCBAIEggFvBIIBawFpAHcAu9nfvB+KcbWTlCOXqpJ7RzhXlQqrUugakJZkNo4e0YUAAAFwHO35qwAABAMASDBGAiEA1NjlPkXEp/2RypvoTm/8gwiiuGlHaJidaXi0miMwusgCIQDkB6Km7bR9u+8J0mNAfAL1tc0PZvhcf/VXVYHLnMrqHwB2ACJFRQdZVSRWlj+hL/H3bYbgIyZjrcBLf13Gg1xu4g8CAAABcBzt+fcAAAQDAEcwRQIgJeiqK30nhtHYXfX22amqKJeRWeYmw7uHyDNVf2mRQPgCIQC6O0WJlf5lVTPUtELj4no0rTu3y3S6WFQ4MTmbRTTkBgB2AFGjsPX9AXmcVm24N3iPDKR6zBsny/eeiEKaDf7UiwXlAAABcBzt+iUAAAQDAEcwRQIgUZvwuLlH2R8D3wJ/Q8ks5zUKuad5nmexX1sE6SljHmoCIQCxxCNFnqNfo8qA/VZavRKb0x8wM5Ld2GT85d8vDimxczANBgkqhkiG9w0BAQsFAAOCAQEAW9h6r42gtkNFMgiw6IBN9ZI+C3UKPo0Ye5ja2fQ08MD4vXOyX33YbgBlIefLtKXqRqkRG7USNkGmL0ed36xFSVwUuc09NQ+v21sWi8V/yMMBvgSibxIQfYMnz9cWqncyHDqRU6FJpD8r37oOacVA3Y6ob9BgrldwkWFD4V3Zlt7ZW77auAhcGtay+HIshC0rGWdogHcEAFCIBt/xeEFXbQtAbglKrU58/2KI2oVENLt5QiQUnETbt/48sLHwDJbvCeF5HG+FKpK+OwzSBM6R7So8jxZObGuWlnCppCRMHKGFLoiFH7MtMe5WYDTPk8Lae+y2M/bHP3SnqqJvn/fRHcAUAwMAAAAAAQEAAAAAAAAEbm9uZQAAABBSU0EtUEtDUzEtU0hBMjU2AAAA request-method GET response-head HTTP/1.1 200 OK
+Date: Mon, 10 May 2021 04:24:39 GMT
+Content-Type: text/html
+Content-Length: 8600
+X-Frame-Options: deny
+Cache-Control: no-cache
+ original-response-headers Date: Mon, 10 May 2021 04:24:39 GMT
+Content-Type: text/html
+Content-Length: 8600
+Connection: keep-alive
+X-Frame-Options: deny
+Cache-Control: no-cache
+ uncompressed-len 0 net-response-time-onstart 34 net-response-time-onstop 34   !˜
