@@ -1,8 +1,8 @@
-**Update from 29 October 2022:**
+**Update from 29 October 2022**
 
 So, this repo somehow got featured in a YouTube video :D – https://youtu.be/7sO5Po2PNdw?t=573
 
-I was pretty surprised that the person in the video extracted the assets via the cache in the SeaMonkey profile in this repo, using that to play the game, but if you're looking for a quick, easy, non-roundabout way of getting playing PyongyangRacer for yourself, I'd recommend [BlueMaxima's Flashpoint](https://bluemaxima.org/flashpoint/). This repo was never meant for public usage - and support isn't being provided for it.
+I was pretty surprised that the person in the video extracted the assets via the cache in the SeaMonkey profile in this repo, using that to play the game, but if you're looking for a quick, easy, non-roundabout way of getting playing PyongyangRacer for yourself, I'd recommend [BlueMaxima's Flashpoint](https://bluemaxima.org/flashpoint/). This repo was never meant for public usage - and support isn't being provided for it. Thanks for your understanding!
 
 ***
 
